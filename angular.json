@@ -5,7 +5,12 @@
   "projects": {
     "06-heroesApp": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "inlineStyle": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -94,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "cdaaad05-a4c6-40a8-918a-9473d5e4f13b"
   }
 }
