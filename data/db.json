@@ -166,6 +166,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "dc-naruto",
+      "superhero": "Naruto",
+      "publisher": "DC Comics",
+      "alter_ego": "Naruto",
+      "first_appearance": "Chapter 1",
+      "characters": "Sasuke",
+      "alt_img": "https://i.pinimg.com/1200x/71/2b/5d/712b5d6d4c6e23556935262ef58c67e1.jpg"
     }
   ]
 }
