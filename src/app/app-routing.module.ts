@@ -5,15 +5,22 @@ import {
   Error404PageComponent 
 } from './shared/pages/error404-page/error404-page.component';
 
+import { canActivateAuthGuard, canMatchAuthGuard } from './auth/guards/auth.guard';
+import { canActivatePublicGuard, canMatchPublicGuard } from './auth/guards/public.guard';
+
 
 const routes: Routes = [
   { 
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module'). then( m => m.AuthModule )
+    loadChildren: () => import('./auth/auth.module'). then( m => m.AuthModule ),
+    canActivate: [ canActivatePublicGuard ],
+    canMatch: [ canMatchPublicGuard ]
   },
   { 
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module'). then( m => m.HeroesModule )
+    loadChildren: () => import('./heroes/heroes.module'). then( m => m.HeroesModule ),
+    canActivate: [ canActivateAuthGuard],
+    canMatch: [ canMatchAuthGuard ],
   },
   { 
     path: '404',
